@@ -31,7 +31,7 @@ Route::post('/chirps', function () {
         'user_id' => auth()->id(),
     ]);
 
-    return to_route('chirps.index');
+    return to_route('chirps.index')->with('status','Chirp creado sactifactoriamente');
     // return redirect()->route('chirps.index');
 
 });
