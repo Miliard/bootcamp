@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Chirp;
 
 
 Route::view('/','welcome')->name('welcome');
@@ -21,6 +22,22 @@ Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.
 Route::get('/chirps', function () {
     return view('chirps.index');
 })->name('chirps.index');
+
+Route::post('/chirps', function () {
+
+    //insert into data base
+    Chirp::create([
+        'message' => request('message'),
+        'user_id' => auth()->id(),
+    ]);
+
+    return to_route('chirps.index');
+    // return redirect()->route('chirps.index');
+
+});
+
+
+
 
 
 });
