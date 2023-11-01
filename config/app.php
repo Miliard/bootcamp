@@ -70,7 +70,10 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    // 'timezone' => 'UTC',
+    // archivo config/app.php
+
+        'timezone' => 'America/El_Salvador',
 
     /*
     |--------------------------------------------------------------------------
