@@ -73,7 +73,9 @@
     "Your email address is unverified.": "Su dirección de correo electrónico no está verificada.",
     "Edit Chirp": "Editar Chirp",
     "Chirp update successfully!": "Chirp actulizado exitosamente!!!",
-    "edited": "editado"
+    "edited": "editado",
+    "Chirp deleted successfully!": "!Chirp eliminado exitosamente",
+    "Delete Chirp": "Eliminado Chirp"
 
 
 }

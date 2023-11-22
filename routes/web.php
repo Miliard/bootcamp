@@ -3,6 +3,7 @@
 // Importar controladores que se van a utilizar
 use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Chirp;
 use Illuminate\Support\Facades\Route;
 
 // Página de inicio pública
@@ -26,6 +27,8 @@ Route::middleware('auth')->group(function () {
   Route::get('/chirps/{chirp}/edit', [ChirpController::class, 'edit'] )->name('chirps.edit');
 
   Route::put('/chirps/{chirp}', [ChirpController::class, 'update'])->name('chirps.update');
+
+  Route::delete('/chirps/{chirp}', [ChirpController::class, 'destroy'])->name('chirps.destroy');
 });
 
 // Importar rutas de autenticación
